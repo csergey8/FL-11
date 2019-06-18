@@ -1,0 +1,99 @@
+/*
+
+write your code here
+
+*/
+
+
+/* Style for screen */
+@media screen {
+
+}
+
+
+/* Style for print */
+@media print {
+
+  ol {
+    margin: 0 auto;
+    list-style: none;
+    text-transform: capitalize;
+    padding-left: 0;
+    width: 40%;
+  }
+
+  li a {
+    color: #000;
+  }
+
+  li:nth-child(odd) {
+    text-align: left;
+  }
+
+  li:nth-child(even) {
+    text-align: right;
+  }
+
+  li::first-letter {
+    color: #87CEFA;
+    font-size: 30px;
+  }
+
+  #tmCarousel {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  #about, #contact {
+    display: none;
+  }
+
+  .tm-sidebar, .tm-team-img, .gallery-container, .carousel-indicators, .img-contact-us {
+    display: none;
+  }
+  
+  .container {
+    max-width: 1105px;
+  }
+
+  .tm-section-description {
+    margin-bottom: 0;
+  }
+
+  .padding-medium {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .tm-main-content {
+    padding: 0;
+  }
+
+  .padding-medium h2 {
+    color: #87CEFA;
+    font-weight: lighter;
+  }
+
+  .tm-team-description-container {
+    max-width: 100%;
+  }
+
+  .tm-content-box {
+   text-align: center;
+   margin-bottom: 0;
+  }
+
+  .tm-section-description {
+    margin-bottom: 15px;
+  }
+
+  .blocks {
+    text-align: center;
+  }
+
+  .tm-section-title {
+    text-transform: uppercase;
+
+  }
+}
