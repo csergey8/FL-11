@@ -8,10 +8,28 @@ write your code here
 /* Style for screen */
 @media screen {
 
+  /* 
+      Task 2 
+  */
+  #about h2:nth-child(odd):hover {
+    color: #fff;
+    background: #87CEFA;
+  }
+
+  /* 
+      Task 3
+  */
+  
+
+
 }
 
 
-/* Style for print */
+/* 
+    
+  Style for print 
+
+*/
 @media print {
 
   ol {
@@ -52,7 +70,7 @@ write your code here
   .tm-sidebar, .tm-team-img, .gallery-container, .carousel-indicators, .img-contact-us {
     display: none;
   }
-  
+
   .container {
     max-width: 1105px;
   }
