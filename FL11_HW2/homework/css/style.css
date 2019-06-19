@@ -37,7 +37,76 @@ write your code here
     text-shadow: 0 3px 1px rgba(118, 205, 215, 0.95), 0 9px 1px rgba(118, 205, 215, 0.95);
   }
 
-  
+  /*
+      Task 4
+  */
+
+
+
+  /*
+      Task 5
+  */
+
+  .heading h2 {
+    text-align: center;
+    color: #87CEFA;
+  }
+
+  .heading ol {
+    list-style-type: lower-roman;
+  }
+
+  .heading a {
+    color: #000;
+    margin-left: 5px;
+  }
+
+  .heading a:visited {
+    color:#ffb347;
+  }
+
+  .heading a:hover {
+    font-weight: bold;
+    color:#ffb347;
+    text-decoration: none;
+    border-left: 3px solid #ffb347;
+    padding-left: 3px;
+  }
+
+  .heading li:nth-child(1)::after, .heading li:nth-child(3)::after {
+    content: 'New';
+    font-size: 10px;
+    color: red;
+    position: relative;
+    bottom: 7px;
+    font-variant: small-caps;
+    font-weight: bold;
+  }
+
+  /*
+      Task 6
+  */
+
+  .boxes li {
+    padding: 10px;
+  }
+
+  .boxes li:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .box p {
+    font-style: italic;
+    font-size: 13px;
+  }
+
+  .box p::first-letter {
+    font-size: 20px;
+  }
+
+  /* */
+
+
 
 
 }
@@ -130,6 +199,5 @@ write your code here
 
   .tm-section-title {
     text-transform: uppercase;
-
   }
 }
