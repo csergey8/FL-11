@@ -225,6 +225,27 @@ write your code here
     text-indent: 20px;
     line-height: 2;
   }
+
+  /*
+    Task 10
+  */
+
+  .tm-banner-text {
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotateY(0)
+    }
+    to {
+      transform: rotateY(360deg)
+    }
+  }
+
+  
   
 
 }
