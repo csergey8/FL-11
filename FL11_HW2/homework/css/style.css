@@ -145,7 +145,7 @@ write your code here
     background-size: 25px 25px;
   }
 
-  .contact-form input:focus::-webkit-input-placeholder {
+  .contact-form input:focus::placeholder {
     color: #fff;
   }
 
@@ -162,7 +162,7 @@ write your code here
     background: #76cdd7;
   }
 
-  .form-group textarea:focus::-webkit-input-placeholder {
+  .form-group textarea:focus::placeholder {
     color: #fff;
   }
 
@@ -179,7 +179,6 @@ write your code here
   .form-group + button:hover {
     color:#fff;
     border-radius: 0;
-    background-color: #87CEFA;
     border: 2px solid #87CEFA;
     width: 166px;
     height: 56px;
@@ -197,10 +196,6 @@ write your code here
   /* 
       Task 9
   */
-
-  /* .tm-team-img {
-    float: left;
-  } */
 
   .flex-2-col {
     display: flex;
@@ -244,10 +239,6 @@ write your code here
       transform: rotateY(360deg)
     }
   }
-
-  
-  
-
 }
 
 
