@@ -138,16 +138,17 @@
     color:#87CEFA;
     border-radius: 0;
     background-color: #fff;
-    border: 2px solid #87CEFA;
+    border: 2px solid #9fd8fb;
     width: 166px;
     height: 56px;
     float: right;
   }
 
-  .form-group + button:hover {
+  .btn-primary:hover {
     color:#fff;
     border-radius: 0;
     border: 2px solid #87CEFA;
+    background: #87CEFA;
     width: 166px;
     height: 56px;
     float: right;
