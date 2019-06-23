@@ -151,6 +151,7 @@
     width: 166px;
     height: 56px;
     float: right;
+    border: none;
   }
 
   nav li:hover {
