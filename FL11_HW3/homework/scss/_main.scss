@@ -1,1 +1,284 @@
-// Write your styles here
+$font: (
+  first: $font-primary,
+  second: $font-secondary
+);
+
+%first_font {
+  font-family: map-get($font, first);
+}
+
+%second_font {
+  font-family: map-get($font, second);
+}
+
+@mixin container {
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+@mixin logo {
+  @extend %second_font;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 56px;
+    height: 56px;
+  }
+
+  p {
+    font-size: 32px;
+    line-height: 1.1;
+    margin-left: 18px;
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    font-size: 13px;
+  }
+}
+
+@mixin before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  @extend %first_font;
+  color: $color-font-primary;
+  background-color: $color-background;
+}
+
+
+
+
+.button {
+  @extend %first_font;
+  width: 180px;
+  height: 60px;
+  background: $color-secondary;
+  border: none;
+  color:#fff;
+  font-size: 22px;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-secondary;
+    background: #fff;
+    border: none;
+    transition: background .2s ease-in;
+  }
+}
+
+.header {
+  border-bottom-right-radius: 42% 39%;
+  background-image: $background-url;
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+
+  &-wrap {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 76%;
+    justify-content: space-between;
+  }
+
+  &_heading {
+    font-size: 88px;
+    font-weight: 800;
+    line-height: 1;
+    width: 615px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+
+    &::before {
+      @include before;
+      border-bottom: 31px solid $color-primary;
+      bottom: 2px;
+      left: 0;
+      width: 380px;
+    }
+  }
+
+  &_button {
+    @extend .button;
+  }
+
+  &_text {
+    @extend %second_font;
+    width: 820px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    white-space: pre-line;
+    position: relative;
+    bottom: 13px;
+    line-height: 1.7;
+  }
+  .landing-logo {
+    @include logo;
+    padding: 25px 0;
+  }
+}
+
+.section {
+  @include container;
+  background-color: $color-background;
+
+  &_text {
+    text-align: center;
+    margin: 50px auto;
+    width: 550px;
+    font-size: 50px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      @include before;
+      border-bottom: 16px solid $color-primary;
+      bottom: 7px;
+      right: 32px;
+      width: 237px;
+    }
+  }
+
+  &_card_wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  &_card {
+    width: 497px;
+    text-align: center;
+    background: $color-background-secondary;
+    height: 572px;
+    padding: 25px;
+    border-radius: 5px;
+
+    &:nth-child(3) {
+      p {
+      &:last-child {
+        margin-top: 10px;
+        }
+      }
+    }
+
+    &_img {
+      height: auto;
+      width: 440px;
+      border-radius: 5px;
+    }
+
+    &_heading {
+      color: #fff;
+      font-size: 30px;
+      margin: 34px 0 25px 0;
+      position: relative;
+      z-index: 1;
+      border-bottom: 16px solid $color-primary;
+      width: auto;
+      display: inline-block;
+      line-height: 0;
+    }
+
+    &_text {
+      @extend %second_font;
+      color: $color-font-secondary;
+      font-size: 20px;
+      word-spacing: 1px;
+      line-height: 1.5;
+    }
+  }
+
+  &_banner {
+    margin: 0 auto;
+    width: 1200px;
+    height: 180px;
+    background: linear-gradient(to right, $color-secondary, $color-third);
+    border-radius: 5px;
+    position: relative;
+    top: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &_button {
+      @extend .button;
+    }
+
+    &_heading {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      position: relative;
+      bottom: 22px;
+      z-index: 1;
+
+      &::before {
+        @include before;
+        border-bottom: 16px solid $color-primary;
+        bottom: 2px;
+        left: 153px;
+        width: 80px;
+      }
+    }
+
+    &_text {
+      @extend %second_font;
+      font-size: 20px;
+      word-spacing: 1px;
+      color: $color-font-secondary;
+    }
+  }
+}
+
+.footer {
+  height: 300px;
+  background: $color-background-secondary;
+
+  &-wrap {
+    @include container;
+    @extend %second_font;
+    display: flex;
+    justify-content: space-between;
+    color: $color-font-secondary;
+    align-items: center;
+    position: relative;
+    top: 157px;
+  }
+
+  &_text {
+    width: 386px;
+    font-size: 18px;
+    line-height: 1.3;
+    word-spacing: -2px;
+  }
+
+  &_logo {
+    @include logo;
+  }
+
+  &-cr {
+    font-size: 20px;
+  }
+}
