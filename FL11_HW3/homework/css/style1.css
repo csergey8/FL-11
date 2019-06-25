@@ -30,7 +30,7 @@ body {
     color: #699900;
     background: #fff;
     border: none;
-    transition: background .2s ease-in; }
+    transition: background 0.2s ease-in; }
 
 .header {
   border-bottom-right-radius: 42% 39%;

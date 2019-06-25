@@ -1,6 +1,6 @@
 $font: (
   first: $font-primary,
-  second: $font-secondary
+  second: $font-secondary,
 );
 
 %first_font {
@@ -48,9 +48,9 @@ $font: (
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
@@ -63,16 +63,13 @@ body {
   background-color: $color-background;
 }
 
-
-
-
 .button {
   @extend %first_font;
   width: 180px;
   height: 60px;
   background: $color-secondary;
   border: none;
-  color:#fff;
+  color: #fff;
   font-size: 22px;
 
   &:hover {
@@ -80,7 +77,7 @@ body {
     color: $color-secondary;
     background: #fff;
     border: none;
-    transition: background .2s ease-in;
+    transition: background 0.2s ease-in;
   }
 }
 
@@ -177,8 +174,8 @@ body {
 
     &:nth-child(3) {
       p {
-      &:last-child {
-        margin-top: 10px;
+        &:last-child {
+          margin-top: 10px;
         }
       }
     }
