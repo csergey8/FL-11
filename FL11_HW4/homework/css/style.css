@@ -252,20 +252,19 @@ body {
   width: 50%;
   height: 478px;
   position: relative;
+  box-shadow: inset 25px 0px 25px -25px rgba(0, 0, 0, 0.45),
+    inset -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
 }
 
 .article__card:nth-child(1) {
   background-image: url("../img/sample-1.jpg");
   background-size: cover;
-  box-shadow: inset 25px 0px 25px -25px rgba(0, 0, 0, 0.45),
-    inset -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
 }
 
 .article__card:nth-child(2) {
   background-image: url("../img/sample-2.jpg");
   background-size: cover;
-  box-shadow: inset 25px 0px 25px -25px rgba(0, 0, 0, 0.45),
-    inset -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
+  
 }
 
 .article__card:nth-child(2),
@@ -311,6 +310,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 25px 0px 25px -25px rgba(0, 0, 0, 0.45),
+    inset -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
 }
 
 .gallery__card:nth-child(1) {
