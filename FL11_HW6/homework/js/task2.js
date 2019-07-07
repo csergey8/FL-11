@@ -1,3 +1,5 @@
+'use strict';
+
 const a = parseFloat(prompt('Enter the length of the side A of the triangle'));
 const b = parseFloat(prompt('Enter the length of the side B of the triangle'));
 const c = parseFloat(prompt('Enter the length of the side C of the triangle'));

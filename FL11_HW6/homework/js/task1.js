@@ -1,3 +1,5 @@
+'use strict';
+
 const a1 = parseFloat(prompt('enter the coordinate value along the x-axis of point a(a1):'));
 const a2 = parseFloat(prompt('enter the coordinate value along the y-axis of point a(a2):'));
 const b1 = parseFloat(prompt('enter the coordinate value along the x-axis of point b(b1):'));
