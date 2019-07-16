@@ -1,19 +1,19 @@
-'use strict'
+'use strict';
 
 const getNumbers = str => {
   let numbersArray = [];
-  for(let char of str) {
-    if(!isNaN(char)){
+  for (let char of str) {
+    if (!isNaN(char)) {
       numbersArray.push(parseFloat(char));
     }
   }
-  return numbersArray
+  return numbersArray;
 }
 
 const findTypes = (...args) => {
   let types = {};
-  for(let el of args) {
-    if(!types[typeof el]) {
+  for (let el of args) {
+    if (!types[typeof el]) {
       types[typeof el] = 1;
     } else {
       types[typeof el]++;
@@ -23,7 +23,7 @@ const findTypes = (...args) => {
 }
 
 const executeforEach = (arr, func) => {
-  for(let el of arr) {
+  for (let el of arr) {
     func(el);
   }
 }
@@ -41,13 +41,13 @@ const filterArray = (arr, func) => {
   executeforEach(arr, el => {
     func(el) ? newArray.push(el) : null
   })
-  return newArray
+  return newArray;
 }
 
 const showFormattedDate = date => {
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const d = new Date(date);
-  return `Date: ${months[d.getMonth()]} ${d.getDate()} ${d.getFullYear()}`
+  return `Date: ${months[d.getMonth()]} ${d.getDate()} ${d.getFullYear()}`;
 }
 
 const canConvertToDate = date => !isNaN(new Date(date).getTime());
@@ -67,26 +67,25 @@ const getAmountOfAdultPeople = arr => {
     let yearsOld = daysBetween(new Date(el[' birthday ']), new Date()) / days;
     return yearsOld > years
   })
-  return filteredArray.length
+  return filteredArray.length;
 }
 
 const keys = obj => {
   let arr = [];
-  for(let key in obj) {
-    if(obj.hasOwnProperty(key)) {
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
       arr.push(key);
     }
   }
-  return arr
+  return arr;
 }
 
 const values = obj => {
   let arr = [];
-  for(let key in obj) {
-    if(obj.hasOwnProperty(key)) {
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
       arr.push(obj[key]);
     }
   }
-  return arr
+  return arr;
 }
-
