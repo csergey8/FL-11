@@ -1,26 +1,31 @@
 'use strict';
 
-function Fighter (obj) {
-  let { name, damage, hp, agility } = obj;
+function Fighter(obj) {
+  let {
+    name,
+    damage,
+    hp,
+    agility
+  } = obj;
   const initHp = obj.hp;
   let wins = 0;
   let losses = 0;
 
-  function logCombatHistory () {
+  function logCombatHistory() {
     console.log(`Name: ${name}, Wins: ${wins}, Losses: ${losses}`)
   }
 
-  function heal (num) {
+  function heal(num) {
     hp += num;
     hp > initHp ? hp = initHp : null;
   }
 
-  function dealDamage (num) {
+  function dealDamage(num) {
     hp -= num;
     hp < 0 ? hp = 0 : null;
   }
 
-  function attack (fighter) {
+  function attack(fighter) {
     const hundred = 100;
     const successProbability = hundred - fighter.getAgility();
     const random = Math.random() * hundred;
@@ -46,7 +51,7 @@ function Fighter (obj) {
   }
 }
 
-function battle (fighter1, fighter2) {
+function battle(fighter1, fighter2) {
   if (fighter1.getHealth() <= 0) {
     console.log(`${fighter1.getName()} is dead and can't fight`);
   } else if (fighter2.getHealth() <= 0) {
@@ -69,5 +74,15 @@ function battle (fighter1, fighter2) {
   }
 }
 
-const fighter1 = new Fighter({ name: 'John', damage: 20, hp: 100, agility: 25 });
-const fighter2 = new Fighter({ name: 'Jim', damage: 10, hp: 120, agility: 40 });
+const fighter1 = new Fighter({
+  name: 'John',
+  damage: 20,
+  hp: 100,
+  agility: 25
+});
+const fighter2 = new Fighter({
+  name: 'Jim',
+  damage: 10,
+  hp: 120,
+  agility: 40
+});
