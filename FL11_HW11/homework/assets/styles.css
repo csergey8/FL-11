@@ -1,0 +1,115 @@
+/* Your styles goes here */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #81D4FA;
+}
+
+.container {
+  width: 70%;
+  margin: 3rem auto;
+  height: 90vh;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 5px;
+  padding: 3rem;
+  color: #2196F3;
+}
+
+h1 {
+  text-align: center;
+}
+
+.alert {
+  text-align: center;
+  color: red;
+  opacity: 0;
+  transition: opacity .5s linear;
+}
+
+.add_item {
+  display: flex;
+  padding: 10px 0;
+}
+
+.add_item > input {
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 15px;
+}
+
+.add_item > i {
+  font-size: 3rem;
+}
+
+#addToList {
+  transition: color 0.7s ease;
+}
+
+hr {
+  background: #2196F3;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+  height: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+}
+
+li > input {
+  order: 0;
+  padding-left: 4px;
+}
+
+#delete {
+  margin-left: auto;
+  transition: color .5s linear;
+}
+
+#delete:hover {
+  color: red;
+}
+
+li > input {
+  margin-right: 5px;
+}
+
+.edit_input {
+  font-size: 16px;
+  color: #2196F3;
+}
+
+.checked p {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+i {
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: default;
+  color: rgba(0,0,0,0.19);
+}
