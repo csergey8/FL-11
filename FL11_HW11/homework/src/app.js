@@ -101,7 +101,6 @@ function dragEnd() {
 //Render functions
 
 function drawListItem(item, i) {
-  console.log('q');
   const alert = document.getElementsByClassName('alert');
   const li = document.createElement('li');
   const checkbox = document.createElement('input');
